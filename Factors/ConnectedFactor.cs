@@ -13,7 +13,7 @@ namespace KerbalHealth
         {
             if (Core.IsInEditor)
                 return IsEnabledInEditor() ? BaseChangePerDay : 0;
-            return (pcm.IsLoaded() && (pcm.GetVessel().Connection != null) && pcm.GetVessel().Connection.IsConnectedHome)
+            return (pcm.IsLoaded() && (pcm.GetVessel().Connection == null)
                 ? BaseChangePerDay
                 : 0;
         }
